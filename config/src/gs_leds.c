@@ -60,10 +60,18 @@ static int gs_led_init(void)
 
 SYS_INIT(gs_led_init, APPLICATION, 90);
 
+static void ble_led_update_work_handler(struct k_work *work)
+{
+    ARG_UNUSED(work);
+    update_status_leds();
+}
+
+K_WORK_DELAYABLE_DEFINE(ble_led_update_work, ble_led_update_work_handler);
+
 static int gs_ble_led_listener(const zmk_event_t *eh)
 {
     ARG_UNUSED(eh);
-    update_status_leds();
+    k_work_reschedule(&ble_led_update_work, K_MSEC(500));
     return 0;
 }
 
