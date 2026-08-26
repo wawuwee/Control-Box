@@ -1,0 +1,6 @@
+if SHIELD_GS_CONTROL_BOX
+
+config ZMK_KEYBOARD_NAME
+    default "GS Control Box"
+
+endif

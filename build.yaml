@@ -1,0 +1,9 @@
+---
+include:
+  - board: nice_nano//zmk
+    shield: gs_control_box
+    artifact-name: gs_control_box
+
+  - board: nice_nano//zmk
+    shield: settings_reset
+    artifact-name: settings_reset

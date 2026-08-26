@@ -1,0 +1,72 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            /*
+             * Matrix IDs, left-to-right/top-to-bottom:
+             *
+             * 01 Scores          = T
+             * 02 Map -           = W
+             * 03 Sound Off       = -
+             * 04 unused
+             * 05 Tee Box Right   = V
+             *
+             * 06 Big Map         = S
+             * 07 Map +           = Q
+             * 08 Sound On        = +
+             * 09 unused
+             * 10 Tee Box Left    = C
+             *
+             * 11 Target          = J
+             * 12 Go To Ball      = 5
+             * 13 unused
+             * 14 unused
+             * 15 Aim Right       = Right Arrow
+             *
+             * 16 Aim Point       = F3
+             * 17 Show Pin        = P
+             * 18 unused
+             * 19 Aim Up          = Up Arrow
+             * 20 Aim Down        = Down Arrow
+             *
+             * 21 Mulligan        = Ctrl+M
+             * 22 Reset Aim       = A
+             * 23 unused
+             * 24 unused
+             * 25 Aim Left        = Left Arrow
+             *
+             * 26 Heat Map        = Y
+             * 27 Next Hole       = 0
+             * 28 unused
+             * 29 Hide UI         = H
+             * 30 Club -          = K
+             *
+             * 31 Grid            = G
+             * 32 Prev Hole       = 9
+             * 33 unused
+             * 34 Putter          = U
+             * 35 Club +          = I
+             *
+             * 36 Flyover         = O
+             * 37 Hide Objects    = B
+             * 38 unused
+             * 39 Clear Trace     = F1
+             * 40 unused
+             */
+            bindings = <
+                &kp T       &kp W       &kp MINUS   &none        &kp V
+                &kp S       &kp Q       &kp PLUS    &none        &kp C
+                &kp J       &kp N5      &none       &none        &kp RIGHT
+                &kp F3      &kp P       &none       &kp UP       &kp DOWN
+                &kp LC(M)   &kp A       &none       &none        &kp LEFT
+                &kp Y       &kp N0      &none       &kp H        &kp K
+                &kp G       &kp N9      &none       &kp U        &kp I
+                &kp O       &kp B       &none       &kp F1       &none
+            >;
+        };
+    };
+};

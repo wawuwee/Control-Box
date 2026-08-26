@@ -1,0 +1,8 @@
+file_format: "1"
+id: gs_control_box
+name: GS Control Box
+type: shield
+url: https://example.invalid
+requires: [pro_micro]
+features:
+  - keys
