@@ -1,0 +1,3 @@
+name: zmk-feature-gs-control-box-leds
+build:
+  cmake: .
